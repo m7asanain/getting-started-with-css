@@ -74,7 +74,7 @@ img {
 #navbar {
 	font-family: var(--mono);
 	font-size: 80%;
-	padding: 1rem;
+	padding: 1rem 0 4rem 0;
 }
 
 #navbar h1 a {
@@ -138,7 +138,7 @@ img {
 /* intro styles */
 
 #intro {
-	padding: 6rem 1rem 10rem 1rem;
+	padding: 4rem 1rem 10rem 1rem;
 	max-width: 1200px;
 	margin: 0 auto;
 }
