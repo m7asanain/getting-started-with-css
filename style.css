@@ -293,18 +293,18 @@ img {
 
 	/* second project */
 
-	#projects .project-img {
-		grid-column: 5/11;
-		grid-row: 1/2;
-	}
-
-	.projects-text-2 {
-		grid-column: 1/6;
-		grid-row: 1/2;
+	#projects .reverse .projects-text {
+		grid-column: 1/7;
 		order: 2;
+		text-align: left;
 	}
 
-	#projects .projects-text-2 ul {
+	#projects .reverse img {
+		grid-column: 6/11;
+		grid-row: 1/2;
+	}
+
+	#projects .reverse ul {
 		justify-content: flex-start;
 	}
 }
