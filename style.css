@@ -166,7 +166,9 @@ img {
 /* here is the styles of the projects section */
 
 #projects {
-	padding: 4rem 8rem;
+	padding: 4rem 1rem;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 #projects h2 {
@@ -213,11 +215,6 @@ img {
 	font-size: 1rem;
 }
 
-.projects-text,
-.projects-text-2 {
-	margin-top: 5rem;
-}
-
 /* here is the styles for the contact section */
 
 #contact {
@@ -229,6 +226,9 @@ img {
 
 #contact p {
 	margin-bottom: 2rem;
+	width: 350px;
+	margin: 0 auto;
+	padding: 2rem 0;
 }
 
 /* here is the styles of the footer  */
