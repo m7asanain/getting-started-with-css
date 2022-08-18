@@ -1,0 +1,203 @@
+:root {
+	--black: #171321;
+	--dkblue: #0d314b;
+	--plum: #4b0d49;
+	--hotmag: #ff17e4;
+	--magenta: #e310cb;
+	--aqua: #86fbfb;
+	--white: #f7f8fa;
+	--font-size: 1.3rem;
+	--mono: 'Oxygen mono', monospace;
+	--sans: 'Oxygen', sans-serif;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	color: var(--white);
+	font-family: var(--sans);
+	font-size: var(--font-size);
+	margin: 0;
+	padding: 0;
+	background-color: var(--black);
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+}
+
+a {
+	color: var(--magenta);
+}
+
+a:hover {
+	color: var(--hotmag);
+	text-decoration: none;
+}
+
+/* intro styles */
+
+#intro {
+	padding-bottom: 10rem;
+}
+
+#intro p {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+#intro .name {
+	font-family: var(--mono);
+}
+
+.name span {
+	font-family: var(--sans);
+	font-size: 3rem;
+	color: var(--aqua);
+	display: block;
+}
+
+#intro h2 {
+	font-size: 3rem;
+}
+
+/* here is the styles for the contact section */
+
+#contact {
+	text-align: center;
+	background-color: var(--plum);
+	height: 400px;
+	padding-top: 100px;
+	border-top: solid 2px var(--hotmag);
+	border-bottom: solid 2px var(--hotmag);
+
+	/* width: 400px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 3rem auto;
+	background-color: var(--plum); */
+}
+
+#contact input {
+	background-color: var(--magenta);
+	font-family: var(--mono);
+	font-size: 1.3rem;
+	color: var(--white);
+	border: none;
+	width: 120px;
+	height: 40px;
+	margin-left: 15px;
+	border-radius: 5px;
+}
+
+#contact input:hover {
+	cursor: pointer;
+	background-color: var(--hotmag);
+}
+
+/* here is the styles of the navbar */
+
+#navbar {
+	font-family: var(--mono);
+	font-size: 80%;
+	padding: 1rem;
+}
+
+#navbar h1 a {
+	font-family: var(--sans);
+}
+
+#navbar ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+#navbar li:first-child {
+	flex-basis: 100%;
+	text-align: center;
+}
+
+#navbar [class*='fa-'] {
+	font-size: 150%;
+	color: var(--aqua);
+}
+
+#navbar [class*='fa-']:hover {
+	color: var(--magenta);
+}
+
+#navbar h1 [class*='fa-'] {
+	font-size: 100%;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: var(--white);
+	display: block;
+}
+
+#navbar a:hover {
+	color: var(--magenta);
+}
+
+#navbar .button {
+	background-color: var(--magenta);
+	padding: 0.5rem;
+	border-radius: 5px;
+}
+
+#navbar ul .button:hover {
+	color: var(--white);
+	background-color: var(--hotmag);
+}
+
+/* here is the styles of the footer  */
+
+#footer {
+	text-align: center;
+	height: 340px;
+	padding-top: 70px;
+}
+
+#footer ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 2rem 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 3rem;
+	font-size: 3rem;
+}
+
+/* here is the media queries of the navbar */
+
+@media (min-width: 850px) {
+	#navbar {
+		max-width: 1200px;
+		margin: 0 auto;
+		margin-top: 1.5rem;
+	}
+
+	#navbar li:first-child {
+		flex-basis: auto;
+		text-align: left;
+		margin-right: auto;
+	}
+}
