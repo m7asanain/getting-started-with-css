@@ -13,6 +13,7 @@
 
 html {
 	box-sizing: border-box;
+	margin-top: 1.5rem;
 }
 
 *,
@@ -45,64 +46,27 @@ a:hover {
 	text-decoration: none;
 }
 
-/* intro styles */
-
-#intro {
-	padding-bottom: 10rem;
+img {
+	width: 100%;
 }
 
-#intro p {
-	font-size: 1rem;
-	line-height: 1.5;
-}
+/* background styles divs */
 
-#intro .name {
-	font-family: var(--mono);
-}
-
-.name span {
-	font-family: var(--sans);
-	font-size: 3rem;
-	color: var(--aqua);
-	display: block;
-}
-
-#intro h2 {
-	font-size: 3rem;
-}
-
-/* here is the styles for the contact section */
-
-#contact {
-	text-align: center;
+.section-plum {
 	background-color: var(--plum);
-	height: 400px;
-	padding-top: 100px;
-	border-top: solid 2px var(--hotmag);
-	border-bottom: solid 2px var(--hotmag);
-
-	/* width: 400px;
-	text-align: center;
-	margin: 0 auto;
-	padding: 3rem auto;
-	background-color: var(--plum); */
 }
 
-#contact input {
-	background-color: var(--magenta);
-	font-family: var(--mono);
-	font-size: 1.3rem;
-	color: var(--white);
-	border: none;
-	width: 120px;
-	height: 40px;
-	margin-left: 15px;
-	border-radius: 5px;
+.section-dkblue {
+	background-color: var(--dkblue);
 }
 
-#contact input:hover {
-	cursor: pointer;
-	background-color: var(--hotmag);
+.gradient {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 23, 228, 1) 0%,
+		rgba(134, 251, 251, 1) 100%
+	);
+	height: 2px;
 }
 
 /* here is the styles of the navbar */
@@ -156,15 +120,110 @@ a:hover {
 	color: var(--magenta);
 }
 
-#navbar .button {
+.button {
 	background-color: var(--magenta);
 	padding: 0.5rem;
 	border-radius: 5px;
+	color: var(--white);
+	text-decoration: none;
+	font-family: var(--mono);
 }
 
-#navbar ul .button:hover {
+#navbar ul .button:hover,
+#contact .button:hover {
 	color: var(--white);
 	background-color: var(--hotmag);
+}
+
+/* intro styles */
+
+#intro {
+	padding: 6rem 1rem 10rem 1rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#intro p {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+#intro .name {
+	font-family: var(--mono);
+}
+
+.name span {
+	font-family: var(--sans);
+	font-size: 3rem;
+	color: var(--aqua);
+	display: block;
+}
+
+#intro h2 {
+	font-size: 3rem;
+}
+
+/* here is the styles of the projects section */
+
+#projects {
+	padding: 4rem 1rem;
+}
+
+#projects h2 {
+	font-size: 2.5rem;
+	margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+	color: var(--aqua);
+}
+
+#projects h4 {
+	font-size: 1rem;
+	font-family: var(--mono);
+	margin: 0;
+}
+
+.blackbox {
+	background-color: var(--black);
+	padding: 1rem;
+	border-radius: 10px;
+	color: var(--white);
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+#projects img {
+	margin: 2rem 0 4rem 0;
+	border-left: 1px solid var(--aqua);
+	border-top: 1px solid var(--aqua);
+	border-radius: 25px;
+	padding: 1rem;
+	text-align: center;
+}
+
+#projects ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	gap: 1rem;
+	font-size: 1rem;
+}
+
+/* here is the styles for the contact section */
+
+#contact {
+	text-align: center;
+	background-color: var(--plum);
+	height: 400px;
+	padding-top: 100px;
+}
+
+#contact p {
+	margin-bottom: 2rem;
 }
 
 /* here is the styles of the footer  */
@@ -172,7 +231,7 @@ a:hover {
 #footer {
 	text-align: center;
 	height: 340px;
-	padding-top: 70px;
+	padding: 4rem 0;
 }
 
 #footer ul {
@@ -199,5 +258,31 @@ a:hover {
 		flex-basis: auto;
 		text-align: left;
 		margin-right: auto;
+	}
+}
+
+/* here is the media queries of the projects */
+
+@media (min-width: 550px) {
+	article {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		gap: 1rem;
+	}
+
+	#projects img {
+		grid-column: 1/6;
+		grid-row: 1/2;
+	}
+
+	.projects-text {
+		grid-column: 5/11;
+		grid-row: 1/2;
+		order: 2;
+		text-align: right;
+	}
+
+	#projects ul {
+		justify-content: flex-end;
 	}
 }
