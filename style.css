@@ -219,6 +219,8 @@ nav h1 [class*='fa-'] {
 	background-color: var(--hotmag);
 }
 
+/* footer styles */
+
 footer {
 	text-align: center;
 	padding: 4rem 0;
@@ -234,6 +236,15 @@ footer ul {
 	list-style-type: none;
 	margin: 2rem 0;
 	padding: 0;
+}
+
+.about-me {
+	background-color: var(--dkblue);
+}
+
+.about-nav {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 
 @media (min-width: 550px) {
