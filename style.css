@@ -22,7 +22,7 @@ html {
 }
 
 body {
-	background-color: var(--plum);
+	background-color: var(--black);
 	color: var(--white);
 	font-family: var(--sans);
 	font-size: var(--font-size);
@@ -48,7 +48,9 @@ a:hover {
 /* intro styles */
 
 #intro {
-	padding-bottom: 10rem;
+	padding: 4rem 1rem 10rem 1rem;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 #intro p {
@@ -74,10 +76,24 @@ a:hover {
 
 /* styling the contact section */
 
+.section-plum {
+	background-color: var(--plum);
+}
+
+.gradient {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 23, 228, 1) 0%,
+		rgba(134, 251, 251, 1) 100%
+	);
+	height: 2px;
+}
+
 #contact {
 	margin: 0 auto;
 	padding: 3rem 0;
 	text-align: center;
+	/* background-color: var(--plum); */
 	width: 400px;
 }
 
@@ -132,4 +148,48 @@ nav [class*='fa-'] {
 nav h1 [class*='fa-'] {
 	color: var(--aqua);
 	font-size: 100%;
+}
+
+.button {
+	background-color: var(--magenta);
+	padding: 0.5rem;
+	border-radius: 5px;
+	color: var(--white);
+	font-family: var(--mono);
+	text-decoration: none;
+}
+
+.button:hover {
+	color: var(--white);
+	background-color: var(--hotmag);
+}
+
+footer {
+	text-align: center;
+	padding: 4rem 0;
+}
+
+footer ul {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 3rem;
+	gap: 3rem;
+	justify-content: center;
+	list-style-type: none;
+	margin: 2rem 0;
+	padding: 0;
+}
+
+@media (min-width: 850px) {
+	nav {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	nav li:first-child {
+		flex-basis: auto;
+		text-align: left;
+		margin-right: auto;
+	}
 }
